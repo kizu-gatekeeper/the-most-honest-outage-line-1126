@@ -11,7 +11,7 @@ MAX_CHARS = 160
 
 
 def write_entry(out_dir):
-    """Validate the entry line and write it with no trailing newline."""
+    """Validate the one-line status message and write it with no trailing newline."""
     if not LINE or LINE != LINE.strip() or "\n" in LINE or len(LINE) > MAX_CHARS:
         raise ValueError("entry line fails format validation")
     os.makedirs(out_dir, exist_ok=True)
